@@ -158,7 +158,7 @@
         </v-flex>
       </v-layout>
       <v-flex xs12>
-        <carousel loop dots :responsive="{0:{items:1,nav:false},600:{items:3,nav:false}}">
+        <carousel loop autoplay dots :responsive="{0:{items:1,nav:false},600:{items:3,nav:false}}">
           <v-card
             color="transparent"
             dark
