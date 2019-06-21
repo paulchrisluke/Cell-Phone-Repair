@@ -2,7 +2,7 @@
   <v-app style="background: linear-gradient(115.51deg, #121416 0%, #2B354C 100%);" id="app">
     <!-- <Toolbar></Toolbar> -->
     <router-view/>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </v-app>
 </template>
 
