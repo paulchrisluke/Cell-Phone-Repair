@@ -1,19 +1,23 @@
 <template>
   <v-container-fluid>
     <v-card dark height="400px">
-      <v-img :src="cracked_phone" height="400px" position="center">
+      <v-img :src="content.featuredImage" height="400px" position="center">
+      <v-container>
+        <img v-if="content.images.length > 0" :src="content.images[0].url" class="hidden-sm-and-down" style="position:absolute; bottom:30px; width:400px;">
+        <img v-if="content.images.length > 0" :src="content.images[0].url" class="hidden-md-and-up" style="position:absolute; bottom:30px; width:200px;">
+      </v-container>
       </v-img>
     </v-card>
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex xs12 class="mt-5 mb-3">
           <h1 style="font-size: 36px; line-height: 49px; color: #FFFFFF;">
-            Phone Screen Replacement
+            {{content.title}}
           </h1>
         </v-flex>
         <v-flex xs12>
           <p style="font-size: 16px; line-height: 28px; color: #B9BCC1;">
-            When you’re in need of an iPad repair in Chattanooga, TN, rely on the technicians of Cell Phone Repair Chattanooga. From watching movies and browsing the Internet to sending emails and completing school work, we understand that you depend on your iPad for a lot. That’s why we work quickly to return your iPad to its original state as soon as possible. Contact CPR in Chattanooga today for a free estimate on your iPad repair.
+            {{content.h2}}
           </p>
         </v-flex>
       </v-layout>
@@ -245,12 +249,12 @@
     </v-container>
     <v-container>
       <v-layout row wrap justify-center justify-space-between>
-        <v-flex xs12 sm5 md4 class="mb-5">
-          <img src="../assets/lifetime-warranty-seal-transparent.svg">
+        <v-flex xs12 sm5 md4 class="mb-3">
+          <img v-if="content.images.length > 0" :src="content.images[1].url" style="width:245px; height:172px;">
         </v-flex>
-        <v-flex xs12 sm7 md8 class="mb-5">
-          <p style="font-size: 16px; color: #B9BCC1;" class="mt-4">
-            At Cell Phone Repair Chattanooga, we offer a limited lifetime warranty on all of our repairs. If the original repair fails because of the quality of a part we installed or due to the workmanship in the repairing of the device, Cell Phone Repair Chattanooga will fix it for FREE. No questions asked. You can’t beat a warranty like that!
+        <v-flex xs12 sm7 md8 class="mb-3">
+          <p style="font-size: 16px; color: #B9BCC1;" class="mt-5">
+            {{content && content.modules && content.modules.hotel && content.modules.hotel.gettingAround}}
           </p>
         </v-flex>
       </v-layout>
@@ -259,8 +263,6 @@
 </template>
 
 <script>
-import seal from '../assets/lifetime-warranty-seal-transparent.svg'
-import cracked_phone from '../assets/cracked_phone.png'
 import carousel from 'vue-owl-carousel'
 
 export default {
@@ -270,8 +272,10 @@ export default {
   data(){
     return{
       valid:false,
-      seal,
-      cracked_phone,
+      content:{
+        images:[]
+      },
+
       firstName: '',
       lastName: '',
       email: '',
@@ -312,7 +316,12 @@ export default {
         { text: 'iPhone 5' },
       ]
     }
-  }
+  },
+  created() {
+    this.$http.get('https://stagingapi.whynot.earth/api/v0/pages/slug/cellphonerepair/Phone-Screen-Replacement').then(function(data){
+      this.content=data.body;
+    });
+  },
 }
 </script>
 
