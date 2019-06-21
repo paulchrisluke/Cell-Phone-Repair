@@ -158,8 +158,9 @@
         </v-flex>
       </v-layout>
       <v-flex xs12>
-        <v-layout row wrap justify-space-between>
-          <v-flex xs12 sm6 md4>
+        <!-- <v-layout row wrap justify-space-between>
+          <v-flex xs12 sm6 md4> -->
+          <carousel loop center dots :responsive="{0:{items:1,nav:false},600:{items:3,nav:false}}">
             <v-card
               color="transparent"
               dark
@@ -185,8 +186,8 @@
                 </v-flex>
               </v-card-text>
             </v-card>
-          </v-flex>
-          <v-flex xs12 sm6 md4>
+          <!-- </v-flex> -->
+          <!-- <v-flex xs12 sm6 md4> -->
             <v-card
               color="transparent"
               dark
@@ -212,8 +213,8 @@
                 </v-flex>
               </v-card-text>
             </v-card>
-          </v-flex>
-          <v-flex xs12 sm6 md4>
+          <!-- </v-flex>
+          <v-flex xs12 sm6 md4> -->
             <v-card
               color="transparent"
               dark
@@ -239,8 +240,9 @@
                 </v-flex>
               </v-card-text>
             </v-card>
-          </v-flex>
-        </v-layout>
+          <!-- </v-flex> -->
+        <!-- </v-layout> -->
+          </carousel>
       </v-flex>
     </v-container>
     <v-container>
@@ -261,8 +263,12 @@
 <script>
 import seal from '../assets/lifetime-warranty-seal-transparent.svg'
 import cracked_phone from '../assets/cracked_phone.png'
+import carousel from 'vue-owl-carousel'
 
 export default {
+  components: { 
+    carousel 
+  },
   data(){
     return{
       valid:false,

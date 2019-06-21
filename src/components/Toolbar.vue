@@ -2,7 +2,7 @@
 <v-container>
   <v-toolbar app dark color="#191C21" style="box-shadow: 0px 1px 0px #121416;" dense>
     <router-link to="/">
-      <img src="" style="height:30px;">
+      <img src="../assets/logo.png" style="height:30px;">
     </router-link>
     <v-spacer></v-spacer>
     <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer" style="color:#D8DADE;"></v-toolbar-side-icon>
