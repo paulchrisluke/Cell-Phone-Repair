@@ -48,28 +48,28 @@
             <v-layout row wrap justify-center justify-space-between>
               <v-flex xs12 md6 sm6>
                 <v-text-field
-                  v-model="name"
+                  v-model="firstName"
                   outline
                   label="First Name"
                   name="first_name"
                   color="#B9BCC1"
                   required
                   dark
-                  :rules="nameRules"
+                  :rules="firstNameRules"
                 >
                   <!-- <v-icon slot="append" color="#B9BCC1">person</v-icon> -->
                 </v-text-field>
               </v-flex>
               <v-flex xs12 md6 sm6>
                 <v-text-field
-                  v-model="name"
+                  v-model="lastName"
                   outline
                   label="Last Name"
                   name="last_name"
                   color="#B9BCC1"
                   required
                   dark
-                  :rules="nameRules"
+                  :rules="lastNameRules"
                 >
                   <!-- <v-icon slot="append" color="#B9BCC1">person</v-icon> -->
                 </v-text-field>
@@ -99,7 +99,7 @@
                 color="#B9BCC1"
                 required
                 dark
-                :rules="nameRules"
+                :rules="phoneRules"
               >
                 <!-- <v-icon slot="append" color="#B9BCC1">local_phone</v-icon> -->
               </v-text-field>
@@ -108,12 +108,10 @@
               <v-overflow-btn
                 :items="dropdown_edit"
                 v-model="phoneModel"
-                editable
                 color="#B9BCC1"
                 required
                 dark
                 outline
-                item-value="text"
                 style="padding:0; margin:0;"
                 :rules="modelRules"
               >
@@ -270,13 +268,17 @@ export default {
       valid:false,
       seal,
       cracked_phone,
-      name: '',
+      firstName: '',
+      lastName: '',
       email: '',
       phone: '',
       message: '',
       phoneModel: '',
-      nameRules: [
-        v => !!v || 'Name is required',
+      firstNameRules: [
+        v => !!v || 'First Name is required',
+      ],
+      lastNameRules: [
+        v => !!v || 'Last Name is required',
       ],
       modelRules: [
         v => !!v || 'Model Name is required',
@@ -314,7 +316,7 @@ export default {
 .v-input__icon--append{
   position: absolute;
   top:15px;
-  right:20px;
+  right:0px;
 }
 
 @media only screen and (max-width: 600px) {
