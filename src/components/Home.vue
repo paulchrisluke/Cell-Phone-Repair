@@ -247,10 +247,10 @@
     </v-container>
     <v-container>
       <v-layout row wrap justify-center justify-space-between>
-        <v-flex xs12 sm4 md4 class="mb-5">
+        <v-flex xs12 sm5 md4 class="mb-5">
           <img src="../assets/lifetime-warranty-seal-transparent.svg">
         </v-flex>
-        <v-flex xs12 sm8 md8 class="mb-5">
+        <v-flex xs12 sm7 md8 class="mb-5">
           <p style="font-size: 16px; color: #B9BCC1;" class="mt-4">
             At Cell Phone Repair Chattanooga, we offer a limited lifetime warranty on all of our repairs. If the original repair fails because of the quality of a part we installed or due to the workmanship in the repairing of the device, Cell Phone Repair Chattanooga will fix it for FREE. No questions asked. You can’t beat a warranty like that!
           </p>
