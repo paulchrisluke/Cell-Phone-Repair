@@ -158,91 +158,89 @@
         </v-flex>
       </v-layout>
       <v-flex xs12>
-        <!-- <v-layout row wrap justify-space-between>
-          <v-flex xs12 sm6 md4> -->
-          <carousel loop center dots :responsive="{0:{items:1,nav:false},600:{items:3,nav:false}}">
-            <v-card
-              color="transparent"
-              dark
-              flat
-              style="margin:0; padding:0;"
-            >
-              <v-card-title style="margin:0; padding:0;">
-                <v-flex xs6 class="mb-3">
-                  <h3 style="font-size: 20px; color: #D8DADE; margin:0; padding:0;">
-                    John
-                  </h3>
+        <carousel loop dots :responsive="{0:{items:1,nav:false},600:{items:3,nav:false}}">
+          <v-card
+            color="transparent"
+            dark
+            flat
+            class="ma-1"
+          >
+            <v-card-title style="margin:0; padding:0;">
+              <v-flex xs12 class="mb-1">
+                <h3 style="font-size: 20px; color: #D8DADE; margin:0; padding:0;">
+                  Cole Graham
+                </h3>
+                <v-flex style="margin-left:34px;">
+                  <v-icon size="14px" style="width:14px;" color="#D2BC6D">star star star star star</v-icon>
                 </v-flex>
-                  <v-spacer></v-spacer>
-                <v-flex xs6 class="mb-3">
-                  <p style="font-size: 16px; color: #B9BCC1; margin:0; padding:0;">September 2016</p>
+              </v-flex>
+              <v-flex xs12 class="mb-3">
+                <p style="font-size: 16px; color: #B9BCC1; margin:0; padding:0;">June 11, 2019</p>
+              </v-flex>
+            </v-card-title>
+            <v-card-text style="margin:0; padding:0;">
+              <v-flex xs12 class="mb-3 mr-3">
+                <p style="font-size: 16px; color: #B9BCC1;">
+                  Went in today to get my charging port fixed on my phone and it turns out all they had to do was clean it out. The staff is super helpful and incredibly nice; it’s definitely worth fighting Gunbarrel traffic to go here!
+                </p>
+              </v-flex>
+            </v-card-text>
+          </v-card>
+          <v-card
+            color="transparent"
+            dark
+            flat
+            class="ma-1"
+          >
+            <v-card-title style="margin:0; padding:0;">
+              <v-flex xs12 class="mb-1">
+                <h3 style="font-size: 20px; color: #D8DADE; margin:0; padding:0;">
+                  Missy Foreshee
+                </h3>
+                <v-flex style="margin-left:34px;">
+                  <v-icon size="14px" style="width:14px;" color="#D2BC6D">star star star star star</v-icon>
                 </v-flex>
-              </v-card-title>
-              <v-card-text style="margin:0; padding:0;">
-                <v-flex xs12 class="mb-3">
-                  <p style="font-size: 16px; color: #B9BCC1;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                  </p>
+              </v-flex>
+              <v-flex xs12 class="mb-3">
+                <p style="font-size: 16px; color: #B9BCC1; margin:0; padding:0;">June 19, 2019</p>
+              </v-flex>
+            </v-card-title>
+            <v-card-text style="margin:0; padding:0;">
+              <v-flex xs12 class="mb-3 mr-3">
+                <p style="font-size: 16px; color: #B9BCC1;">
+                  They are awesome! Great price! Fast and very reliable! Did great work on my iPad that the screen was shattered! Got it back same day within a few hours of taking it in! I have sent several people here because of how friendly and fast they are!
+                </p>
+              </v-flex>
+            </v-card-text>
+          </v-card>
+          <v-card
+            color="transparent"
+            dark
+            flat
+            class="ma-1"
+          >
+            <v-card-title style="margin:0; padding:0;">
+              <v-flex xs12 class="mb-1">
+                <h3 style="font-size: 20px; color: #D8DADE; margin:0; padding:0;">
+                  Angie Arnold
+                </h3>
+                <v-flex style="margin-left:34px;">
+                  <v-icon size="14px" style="width:14px;" color="#D2BC6D">star star star star star</v-icon>
                 </v-flex>
-              </v-card-text>
-            </v-card>
-          <!-- </v-flex> -->
-          <!-- <v-flex xs12 sm6 md4> -->
-            <v-card
-              color="transparent"
-              dark
-              flat
-              style="margin:0; padding:0;"
-            >
-              <v-card-title style="margin:0; padding:0;">
-                <v-flex xs6 class="mb-3">
-                  <h3 style="font-size: 20px; color: #D8DADE; margin:0; padding:0;">
-                    John
-                  </h3>
-                </v-flex>
-                  <v-spacer></v-spacer>
-                <v-flex xs6 class="mb-3">
-                  <p style="font-size: 16px; color: #B9BCC1; margin:0; padding:0;">September 2016</p>
-                </v-flex>
-              </v-card-title>
-              <v-card-text style="margin:0; padding:0;">
-                <v-flex xs12 class="mb-3">
-                  <p style="font-size: 16px; color: #B9BCC1;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                  </p>
-                </v-flex>
-              </v-card-text>
-            </v-card>
-          <!-- </v-flex>
-          <v-flex xs12 sm6 md4> -->
-            <v-card
-              color="transparent"
-              dark
-              flat
-              style="margin:0; padding:0;"
-            >
-              <v-card-title style="margin:0; padding:0;">
-                <v-flex xs6 class="mb-3">
-                  <h3 style="font-size: 20px; color: #D8DADE; margin:0; padding:0;">
-                    John
-                  </h3>
-                </v-flex>
-                  <v-spacer></v-spacer>
-                <v-flex xs6 class="mb-3">
-                  <p style="font-size: 16px; color: #B9BCC1; margin:0; padding:0;">September 2016</p>
-                </v-flex>
-              </v-card-title>
-              <v-card-text style="margin:0; padding:0;">
-                <v-flex xs12 class="mb-3">
-                  <p style="font-size: 16px; color: #B9BCC1;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                  </p>
-                </v-flex>
-              </v-card-text>
-            </v-card>
-          <!-- </v-flex> -->
-        <!-- </v-layout> -->
-          </carousel>
+              </v-flex>
+              <v-flex xs12 class="mb-3">
+                <p style="font-size: 16px; color: #B9BCC1; margin:0; padding:0;">June 15, 2019</p>
+              </v-flex>
+            </v-card-title>
+            <v-card-text style="margin:0; padding:0;">
+              <v-flex xs12 class="mb-3 mr-3">
+                <p style="font-size: 16px; color: #B9BCC1;">
+                  I highly recommend this store! I was having a problem with my phone today and a friend recommended CPR Cell Phone Repair. The staff there was super friendly and my phone repair was completed in a few minutes!
+                </p>
+              </v-flex>
+            </v-card-text>
+          </v-card>
+        </carousel>
       </v-flex>
     </v-container>
     <v-container>

@@ -6,8 +6,10 @@ import App from './App'
 import Routes from './routes'
 import VueRouter from 'vue-router'
 import Vuetify from 'vuetify'
+import VueResource from 'vue-resource'
 
 Vue.use(Vuetify)
+Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
